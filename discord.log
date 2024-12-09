@@ -1,0 +1,20 @@
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Logged in as Bastard Bot
+[2024-12-10 00:01:05] [INFO    ] discord_bot: discord.py API version: 2.4.0
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Python version: 3.12.7
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Running on: Windows 11 (nt)
+[2024-12-10 00:01:05] [INFO    ] discord_bot: -------------------
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'dbedit'
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'fun'
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'general'
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'moderation'
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'owner'
+[2024-12-10 00:01:05] [INFO    ] discord_bot: Loaded extension 'register'
+[2024-12-10 00:01:09] [INFO    ] discord_bot: Bot is ready! Logged in as Bastard Bot#9720 (ID: 1311574852372664381)
+[2024-12-10 00:01:09] [INFO    ] discord_bot: Slash commands synchronized successfully!
+[2024-12-10 00:03:09] [INFO    ] discord_bot: Executed help command in LOS BASTARDOS (ID: 1311571732405948476) by banana_grape_juice (ID: 533486231951114240)
+[2024-12-10 00:10:08] [INFO    ] discord_bot: Assigned Registering role to gimsum. (295461553057038336)
+[2024-12-10 00:10:08] [INFO    ] discord_bot: Sent welcome message to gen for gimsum.
+[2024-12-10 00:15:28] [INFO    ] discord_bot: Assigned Registering role to adriane_18 (1217157639293898943)
+[2024-12-10 00:15:29] [INFO    ] discord_bot: Sent welcome message to gen for adriane_18
+[2024-12-10 00:38:37] [INFO    ] discord_bot: Assigned Registering role to bb3cbbec (786443039672369172)
+[2024-12-10 00:38:37] [INFO    ] discord_bot: Sent welcome message to gen for bb3cbbec
