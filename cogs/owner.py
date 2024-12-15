@@ -5,7 +5,6 @@ from discord import app_commands
 from discord.ext import commands
 from discord.ext.commands import Context
 
-
 class Owner(commands.Cog, name="owner"):
     def __init__(self, bot) -> None:
         self.bot = bot
@@ -189,19 +188,56 @@ class Owner(commands.Cog, name="owner"):
 
     @commands.hybrid_command(
         name="embed",
-        description="The bot will say anything you want, but within embeds.",
+        description="Create a custom embed with dynamic attributes.",
     )
-    @app_commands.describe(message="The message that should be repeated by the bot")
+    @app_commands.describe(
+        title="The title of the embed (optional).",
+        description="The description of the embed (required).",
+        color="The color of the embed in HEX format (e.g., #FF5733, optional).",
+        image="A URL to an image to include in the embed (optional).",
+        image="A URL to an image to include in the embed (optional).",
+        footer="Footer text to include in the embed (optional)."
+    )
     @commands.is_owner()
-    async def embed(self, context: Context, *, message: str) -> None:
+    async def embed(
+        self, 
+        context: Context, 
+        *, 
+        title: str = None,
+        description: str,
+        color: str = "#BEBEFE",
+        image: str = None,
+        footer: str = None
+    ) -> None:
         """
-        The bot will say anything you want, but using embeds.
+        Create a custom embed with dynamic attributes.
 
         :param context: The hybrid command context.
-        :param message: The message that should be repeated by the bot.
+        :param title: The title of the embed.
+        :param description: The description of the embed.
+        :param color: The color of the embed in HEX format.
+        :param image: A URL to an image to include in the embed.
+        :param footer: Footer text to include in the embed.
         """
-        embed = discord.Embed(description=message, color=0xBEBEFE)
-        await context.send(embed=embed)
+        try:
+            # Convert color from HEX to integer
+            color_int = int(color.lstrip("#"), 16)
+            embed = discord.Embed(
+                title=title, description=description, color=color_int
+            )
+
+            if image:
+                embed.set_image(url=image)
+
+            if footer:
+                embed.set_footer(text=footer)
+
+            await context.send(embed=embed)
+
+        except ValueError:
+            await context.send(
+                "Invalid color format! Please provide a HEX value like `#FF5733`."
+            )
 
 
 async def setup(bot) -> None:

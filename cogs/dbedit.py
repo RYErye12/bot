@@ -3,21 +3,21 @@ from discord.ext import commands
 import discord
 
 
-class DatabaseEdit(commands.Cog):
+class DatabaseEdit(commands.Cog, name="Edit DataBase of a User"):
     def __init__(self, bot):
         self.bot = bot
 
     # Base command: /dbedit
-    @app_commands.command(name="dbedit", description="Edit your registration data.")
+    @app_commands.command(name="dbedit", description="Edit registration data.")
     async def dbedit(self, interaction: discord.Interaction):
         """Base command for dbedit. It provides no actions but gives information about available fields."""
         await interaction.response.send_message(
-            "Choose an option to edit. Available fields: `gender`, `games_played`, `uuid`, `current_rank`, `in_game_name`. ",
+            "Available fields: `gender`, `games_played`, `uuid`, `current_rank`, `in_game_name`. ",
             ephemeral=True
         )
 
     # Subcommand: Edit gender
-    @app_commands.command(name="gender", description="Edit your gender.")
+    @app_commands.command(name="dbedit-gender", description="Edit your gender.")
     async def edit_gender(self, interaction: discord.Interaction, gender: str, user: discord.Member = None):
         """Edit the user's gender. Optionally specify a user to edit their gender."""
         user = user or interaction.user  # If no user is mentioned, use the current user
@@ -40,7 +40,7 @@ class DatabaseEdit(commands.Cog):
             )
 
     # Subcommand: Edit games_played
-    @app_commands.command(name="games_played", description="Edit the games you play.")
+    @app_commands.command(name="dbedit-games_played", description="Edit the games you play.")
     async def edit_games_played(self, interaction: discord.Interaction, games: str, user: discord.Member = None):
         """Edit the games the user plays. Optionally specify a user to edit their games_played."""
         user = user or interaction.user  # If no user is mentioned, use the current user
@@ -63,7 +63,7 @@ class DatabaseEdit(commands.Cog):
             )
 
     # Subcommand: Edit UUID
-    @app_commands.command(name="uuid", description="Edit your UUID.")
+    @app_commands.command(name="dbedit-uuid", description="Edit your UUID.")
     async def edit_uuid(self, interaction: discord.Interaction, uuid: str, user: discord.Member = None):
         """Edit the user's UUID. Optionally specify a user to edit their UUID."""
         user = user or interaction.user  # If no user is mentioned, use the current user
@@ -86,7 +86,7 @@ class DatabaseEdit(commands.Cog):
             )
 
     # Subcommand: Edit current_rank
-    @app_commands.command(name="current_rank", description="Edit your current rank.")
+    @app_commands.command(name="dbeditcurrent_rank", description="Edit your current rank.")
     async def edit_current_rank(self, interaction: discord.Interaction, rank: str, user: discord.Member = None):
         """Edit the user's current rank. Optionally specify a user to edit their rank."""
         user = user or interaction.user  # If no user is mentioned, use the current user
@@ -109,7 +109,7 @@ class DatabaseEdit(commands.Cog):
             )
 
     # Subcommand: Edit in_game_name
-    @app_commands.command(name="in_game_name", description="Edit your in-game name.")
+    @app_commands.command(name="dbedit-in_game_name", description="Edit your in-game name.")
     async def edit_in_game_name(self, interaction: discord.Interaction, in_game_name: str, user: discord.Member = None):
         """Edit the user's in-game name. Optionally specify a user to edit their in-game name."""
         user = user or interaction.user  # If no user is mentioned, use the current user

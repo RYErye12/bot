@@ -1,10 +1,3 @@
-"""
-Copyright © Krypton 2019-Present - https://github.com/kkrypt0nn (https://krypton.ninja)
-Description:
-🐍 A simple template to start to code your own and personalized Discord bot in Python
-
-Version: 6.2.0
-"""
 
 import platform
 import random
@@ -91,26 +84,23 @@ class General(commands.Cog, name="general"):
         embed = discord.Embed(
             title="Help", description="List of available commands:", color=0xBEBEFE
         )
-    
-        for cog_name in self.bot.cogs:
-            if cog_name == "owner" and not (await self.bot.is_owner(context.author)):
-                continue
         
+        for cog_name in self.bot.cogs:
             # Try to get the cog instance
             cog = self.bot.get_cog(cog_name.lower())
-        
+            
             # If the cog is None, skip it
             if cog is None:
                 print(f"Warning: Cog '{cog_name}' not found.")
                 continue
-        
+            
             # Get the commands from the cog
             commands = cog.get_commands()
             data = []
             for command in commands:
                 description = command.description.partition("\n")[0]
                 data.append(f"{prefix}{command.name} - {description}")
-        
+            
             help_text = "\n".join(data)
             embed.add_field(
                 name=cog_name.capitalize(), value=f"```{help_text}```", inline=False
@@ -225,7 +215,7 @@ class General(commands.Cog, name="general"):
         :param context: The hybrid command context.
         """
         embed = discord.Embed(
-            description=f"Join the support server for the bot by clicking [here](https://discord.gg/mTBrXyWxAF).",
+            description=f"Join the support server for the bot by clicking [here]().",
             color=0xD75BF4,
         )
         try:

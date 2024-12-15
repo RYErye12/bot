@@ -1,10 +1,3 @@
-"""
-Copyright © Krypton 2019-Present - https://github.com/kkrypt0nn (https://krypton.ninja)
-Description:
-🐍 A simple template to start coding your own and personalized Discord bot in Python
-
-Version: 6.3.0
-"""
 
 import json
 import logging
@@ -176,12 +169,24 @@ class DiscordBot(commands.Bot):
 
         if channel:
             try:
-                await channel.send(f"Welcome to the server, {member.mention}!")
+                embed = discord.Embed(
+                    title="Welcome!",
+                    description=(
+                        f"Welcome to the server, {member.mention}! \nWe're glad to have you here."
+                        f"\nPlease read the rules here: <#1311571732405948478>"
+                    ),
+                    color=0x00FF00,  # You can customize the color
+                )
+                embed.set_thumbnail(url=member.avatar.url if member.avatar else None)
+                embed.set_image(url="https://images-ext-1.discordapp.net/external/VmkpzIxv-CdC8sgXvV60Yh_Z4Ip6fRrR_mATeWZZhS4/https/media.tenor.com/bu0w-cRvyU8AAAAd/welcome.gif")  # Add your GIF/image URL here
+                embed.set_footer(text="Enjoy your stay!")
+                await channel.send(embed=embed)
                 self.logger.info(f"Sent welcome message to {channel.name} for {member.name}")
             except discord.DiscordException as e:
                 self.logger.error(f"Failed to send welcome message to {channel.name}: {e}")
         else:
             self.logger.warning(f"Channel with ID {channel_id} not found!")
+
 
     @tasks.loop(minutes=1.0)
     async def status_task(self) -> None:
