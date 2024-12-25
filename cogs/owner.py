@@ -195,7 +195,6 @@ class Owner(commands.Cog, name="owner"):
         description="The description of the embed (required).",
         color="The color of the embed in HEX format (e.g., #FF5733, optional).",
         image="A URL to an image to include in the embed (optional).",
-        image="A URL to an image to include in the embed (optional).",
         footer="Footer text to include in the embed (optional)."
     )
     @commands.is_owner()

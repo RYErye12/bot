@@ -1,12 +1,15 @@
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Logged in as Bastard Bot
-[2024-12-14 16:21:03] [INFO    ] discord_bot: discord.py API version: 2.4.0
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Python version: 3.12.7
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Running on: Windows 11 (nt)
-[2024-12-14 16:21:03] [INFO    ] discord_bot: -------------------
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Loaded extension 'dbedit'
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Loaded extension 'fun'
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Loaded extension 'general'
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Loaded extension 'moderation'
-[2024-12-14 16:21:03] [ERROR   ] discord_bot: Failed to load extension owner
-ExtensionFailed: Extension 'cogs.owner' raised an error: SyntaxError: keyword argument repeated: image (owner.py, line 198)
-[2024-12-14 16:21:03] [INFO    ] discord_bot: Loaded extension 'register'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Logged in as Bastard Bot
+[2024-12-25 18:15:45] [INFO    ] discord_bot: discord.py API version: 2.4.0
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Python version: 3.12.7
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Running on: Windows 11 (nt)
+[2024-12-25 18:15:45] [INFO    ] discord_bot: -------------------
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'dbedit'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'fun'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'general'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'moderation'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'owner'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'register'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'tikmon'
+[2024-12-25 18:15:45] [INFO    ] discord_bot: Loaded extension 'VoiceChannel'
+[2024-12-25 18:15:48] [INFO    ] discord_bot: Bot is ready! Logged in as Bastard Bot#9720 (ID: 1311574852372664381)
+[2024-12-25 18:15:49] [INFO    ] discord_bot: Slash commands synchronized successfully!

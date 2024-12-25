@@ -20,3 +20,10 @@ CREATE TABLE IF NOT EXISTS user_registration (
     gender TEXT NOT NULL,
     registration_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS tiktok_users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  discord_user_id INTEGER,
+  tiktok_username TEXT,
+  role_id INTEGER
+);
