@@ -302,43 +302,40 @@ class RegistrationCog(commands.Cog, name="registration"):
         except Exception as e:
             await interaction.response.send_message(f"An error occurred: {e}", ephemeral=True)
 
-    @app_commands.command(name="visitor", description="Assign the visitor role and remove registering role.")
-    async def visitor(self, interaction: discord.Interaction):
-        """Assign the visitor role and remove the registering role."""
+    @commands.Cog.listener()
+    async def on_raw_reaction_add(self, payload: discord.RawReactionActionEvent):
+        """Assign the visitor role when a user reacts to a specific message."""
+        # ID of the message to monitor
+        target_message_id = 1321824651357327411  # The ID of the target message
+
+        # ID of the 'visitor' role
         visitor_role_id = 1315700246524723292  # Role ID for visitor
-        registering_role_id = 1314245202990596187  # Role ID for registering
 
-        # Get the roles
-        visitor_role = interaction.guild.get_role(visitor_role_id)
-        registering_role = interaction.guild.get_role(registering_role_id)
+        # Check if the reaction is on the specific message and if it's not a bot reacting
+        if payload.message_id == target_message_id and not payload.user_id == self.bot.user.id:
+            # Fetch the guild (server) where the reaction occurred
+            guild = self.bot.get_guild(payload.guild_id)
+            if guild is None:
+                return  # Skip if the bot can't find the guild
 
-        if not visitor_role:
-            await interaction.response.send_message(
-                "The 'visitor' role could not be found in this server.", ephemeral=True
-            )
-            return
+            # Get the 'visitor' role
+            visitor_role = guild.get_role(visitor_role_id)
 
-        if not registering_role:
-            await interaction.response.send_message(
-                "The 'Registering' role could not be found in this server.", ephemeral=True
-            )
-            return
+            if not visitor_role:
+                print("The 'visitor' role could not be found.")
+                return
 
-        try:
-            # Add the visitor role to the user
-            await interaction.user.add_roles(visitor_role)
-            # Remove the Registering role from the user
-            await interaction.user.remove_roles(registering_role)
+            try:
+                # Get the user who reacted using their user ID
+                user = guild.get_member(payload.user_id)
 
-            await interaction.response.send_message(
-                f"{interaction.user.mention} has been assigned the visitor role and the Registering role has been removed.",
-                ephemeral=True
-            )
+                if user:
+                    # Add the visitor role to the user who reacted
+                    await user.add_roles(visitor_role)
+                    print(f"Assigned the 'visitor' role to {user.name}.")
+            except discord.DiscordException as e:
+                print(f"An error occurred while assigning the role: {e}")
 
-        except discord.DiscordException as e:
-            await interaction.response.send_message(
-                f"An error occurred while updating roles: {e}", ephemeral=True
-            )
 
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):

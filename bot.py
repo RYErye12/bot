@@ -55,6 +55,9 @@ intents.presences = True
 intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
+intents.presences = True
+intents.messages = True
+intents.reactions = True
 
 # Setup both of the loggers
 class LoggingFormatter(logging.Formatter):
@@ -173,10 +176,10 @@ class DiscordBot(commands.Bot):
                 embed = discord.Embed(
                     title="Welcome!",
                     description=(
-                        f"Welcome to the server, {member.mention}! \nWe're glad to have you here."
+                        f"Welcome to the family, {member.mention}! \nWe're glad to have you here."
                         f"\nPlease read the rules here: <#1311571732405948478>"
                     ),
-                    color=0x00FF00,  # You can customize the color
+                    color=0x2b2d31,  # You can customize the color
                 )
                 embed.set_thumbnail(url=member.avatar.url if member.avatar else None)
                 embed.set_image(url="https://images-ext-1.discordapp.net/external/VmkpzIxv-CdC8sgXvV60Yh_Z4Ip6fRrR_mATeWZZhS4/https/media.tenor.com/bu0w-cRvyU8AAAAd/welcome.gif")  # Add your GIF/image URL here
