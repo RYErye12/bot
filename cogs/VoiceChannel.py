@@ -51,7 +51,7 @@ class VoiceChannelManager(commands.Cog, name="voice_channel_manager"):
 
             # Set permissions for the voice channel
             overwrite = {
-                guild.default_role: discord.PermissionOverwrite(view_channel=False),  # Deny everyone by default
+                guild.default_role: discord.PermissionOverwrite(view_channel=True),  # Deny everyone by default
                 vc_role: discord.PermissionOverwrite(
                     view_channel=True,
                     connect=True,

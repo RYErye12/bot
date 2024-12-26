@@ -5,6 +5,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 from discord.ext.commands import Context
+from database import DatabaseManager
 
 class Moderation(commands.Cog, name="moderation"):
     def __init__(self, bot) -> None:

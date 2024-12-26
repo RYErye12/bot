@@ -265,7 +265,7 @@ class RegistrationCog(commands.Cog, name="registration"):
 
         except Exception as e:
             await interaction.followup.send(f"An error occurred: {e}", ephemeral=True)
-
+    
     @app_commands.command(name="indb", description="Get information about a user from the database.")
     async def indb(self, interaction: discord.Interaction, user: discord.User = None):
         """Fetch user information from the database using their Discord ID."""
@@ -339,6 +339,31 @@ class RegistrationCog(commands.Cog, name="registration"):
             await interaction.response.send_message(
                 f"An error occurred while updating roles: {e}", ephemeral=True
             )
+
+    @commands.Cog.listener()
+    async def on_message(self, message: discord.Message):
+        # Channel to monitor
+        target_channel_id = 1314245176411033620
+        exempt_message_id = 1316606878880632962
+
+        # Ensure the bot doesn't delete its own messages or system messages
+        if message.author == self.bot.user or message.type != discord.MessageType.default:
+            return
+
+        # Check if the message is in the target channel
+        if message.channel.id == target_channel_id:
+            # Skip if the message is the exempt one
+            if message.id == exempt_message_id:
+                return
+            
+            # Allow messages starting with '/' (commands), delete the rest
+            if not message.content.startswith("/"):
+                try:
+                    await message.delete()
+                except discord.Forbidden:
+                    print("Missing permissions to delete messages.")
+                except discord.HTTPException as e:
+                    print(f"Failed to delete message: {e}")
 
 
 async def setup(bot):
