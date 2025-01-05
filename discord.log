@@ -1,0 +1,23 @@
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Logged in as Bastard Bot
+[2025-01-05 15:41:51] [INFO    ] discord_bot: discord.py API version: 2.4.0
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Python version: 3.12.8
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Running on: Linux 4.14.186+ (posix)
+[2025-01-05 15:41:51] [INFO    ] discord_bot: -------------------
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'VoiceChannel'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'dbedit'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'send_invite'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'register'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'moderation'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'fun'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'general'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'Creapy'
+[2025-01-05 15:41:51] [INFO    ] discord_bot: Loaded extension 'owner'
+[2025-01-05 15:41:54] [INFO    ] discord_bot: Bot is ready! Logged in as Bastard Bot#9720 (ID: 1311574852372664381)
+[2025-01-05 15:41:54] [INFO    ] discord_bot: Slash commands synchronized successfully!
+[2025-01-05 15:43:25] [INFO    ] discord_bot: Executed kick command in LOS BASTARDOS (ID: 1311571732405948476) by banana_grape_juice (ID: 533486231951114240)
+[2025-01-05 15:45:21] [INFO    ] discord_bot: Assigned Registering role to maddy.9836 (936530023454761000)
+[2025-01-05 15:45:22] [INFO    ] discord_bot: Sent welcome message to gen for maddy.9836
+[2025-01-05 15:58:49] [INFO    ] discord_bot: Assigned Registering role to sekaisr (1165612262380273716)
+[2025-01-05 15:58:50] [INFO    ] discord_bot: Sent welcome message to gen for sekaisr
+[2025-01-05 16:31:58] [INFO    ] discord_bot: Assigned Registering role to ms.deiiiii (1289458868354678805)
+[2025-01-05 16:31:58] [INFO    ] discord_bot: Sent welcome message to gen for ms.deiiiii
