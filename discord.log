@@ -1,0 +1,17 @@
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Logged in as Bastard Bot
+[2025-01-15 00:11:43] [INFO    ] discord_bot: discord.py API version: 2.4.0
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Python version: 3.12.7
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Running on: Windows 11 (nt)
+[2025-01-15 00:11:43] [INFO    ] discord_bot: -------------------
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'Creapy'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'dbedit'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'fun'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'general'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'igns'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'moderation'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'owner'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'register'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'send_invite'
+[2025-01-15 00:11:43] [INFO    ] discord_bot: Loaded extension 'VoiceChannel'
+[2025-01-15 00:11:47] [INFO    ] discord_bot: Bot is ready! Logged in as Bastard Bot#9720 (ID: 1311574852372664381)
+[2025-01-15 00:11:48] [INFO    ] discord_bot: Slash commands synchronized successfully!
